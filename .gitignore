@@ -1,0 +1,58 @@
+## .NET Core build artifacts
+bin/
+obj/
+out/
+
+## Entity Framework
+*.db
+*.db-shm
+*.db-wal
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+## Visual Studio cache/options
+.vs/
+*.cache
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+[Bb]in/
+[Oo]bj/
+
+## NuGet packages
+*.nupkg
+packages/
+
+## Logs
+*.log
+logs/
+
+## Temporary files
+*.tmp
+*.temp
+
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+## JetBrains Rider
+.idea/ 

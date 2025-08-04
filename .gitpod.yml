@@ -1,0 +1,36 @@
+image: gitpod/workspace-dotnet
+
+tasks:
+  - name: Restore Dependencies
+    init: |
+      dotnet restore
+      echo "✅ Dependencies restored successfully!"
+    
+  - name: Start CivicConnect API
+    command: |
+      cd src/CivicConnect.API
+      echo "🚀 Starting CivicConnect API..."
+      dotnet run --urls=http://0.0.0.0:5000
+    
+ports:
+  - port: 5000
+    onOpen: open-browser
+    name: CivicConnect API
+    description: CivicConnect Municipal Complaint Management API
+  - port: 5001
+    onOpen: notify
+    name: CivicConnect HTTPS
+    description: CivicConnect API (HTTPS)
+
+vscode:
+  extensions:
+    - ms-dotnettools.csharp
+    - ms-dotnettools.csdevkit
+    - ms-vscode.vscode-json
+    - humao.rest-client
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true 

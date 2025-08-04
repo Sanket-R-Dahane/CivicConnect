@@ -1,0 +1,11 @@
+modules = ["dotnet-8.0"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "cd src/CivicConnect.API && dotnet run --urls=http://0.0.0.0:5000"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80 
